@@ -29,7 +29,7 @@ comment on column user_info.user_role is '유저 등급';
 comment on column user_info.user_crt_dtm is '생성 날자';
 comment on column user_info.user_zipcode is '우편 번호';
 comment on column user_info.user_address is '지번 주소';
-comment on column user_info.user_detail_address '상세 주소';
+comment on column user_info.user_detail_address is '상세 주소';
 comment on column user_info.del_fl is '삭제 여부';
 comment on column user_info.user_email is '유저 이메일 정보';
 comment on column user_info.user_stat_cd is '유저 상태 코드 0000:미인증, 0001:메일인증, 0002: 핸드폰인증, 0004: 모든인증 완료';

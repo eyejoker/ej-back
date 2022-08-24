@@ -1,6 +1,6 @@
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 
-export const useGlobal = (app: INestApplication): void => {
+export const useGlobals = (app: INestApplication): void => {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

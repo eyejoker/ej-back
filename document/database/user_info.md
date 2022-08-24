@@ -10,12 +10,12 @@ create table if not exists user_info (
 	user_nick varchar(128) not null,
 	user_level int default 1 not null,
 	user_role bpchar(1) default '1' not null,
-  user_email varchar(256) not null,
+	user_email varchar(256) not null,
 	user_crt_dtm timestamp default now() not null,
-  user_stat_cd varchar(4) default '0000' not null,
-  user_zipcode CHARACTER VARYING(64) DEFAULT NULL,
-  user_address TEXT DEFAULT NULL,
-  user_detail_address TEXT DEFAULT NULL,
+	user_stat_cd varchar(4) default '0000' not null,
+	user_zipcode CHARACTER VARYING(64) DEFAULT NULL,
+	user_address TEXT DEFAULT NULL,
+	user_detail_address TEXT DEFAULT NULL,
 	del_fl bpchar(1) default '1' not null
 );
 

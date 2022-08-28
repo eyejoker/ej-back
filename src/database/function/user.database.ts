@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { NEST_PGPROMISE_CONNECTION } from 'nestjs-pgpromise';
 import { IDatabase, ITask } from 'pg-promise';
+import { ReqRegist } from 'src/common/schema/auth/regist.dto';
 
 @Injectable()
 export class UserDatabase {
@@ -10,5 +11,17 @@ export class UserDatabase {
     const userInfo = await t.one<UserInfo>('SELECT * FROM user_info WHERE user_id = ${userId};', { userId });
 
     return userInfo;
+  }
+
+  public async resistUser<T, J>(reqRegist: ReqRegist, t: ITask<any>): Promise<J> {
+    let result: J;
+    // const userInfo = await t.one<UserInfo>('SELECT * FROM user_info WHERE user_id = ${userId};', { userId });
+
+    const userSeqId = '';
+    const callbackData = await t.oneOrNone('', { userSeqId });
+
+    // return userInfo;
+
+    return result;
   }
 }

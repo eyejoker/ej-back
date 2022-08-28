@@ -43,6 +43,7 @@ export class baseHeader {
     required: true,
   })
   @IsIP()
+  @IsOptional()
   ip: string;
 
   /**

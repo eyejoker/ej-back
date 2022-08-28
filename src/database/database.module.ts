@@ -2,8 +2,8 @@ import { Global, Module } from '@nestjs/common';
 import { NestPgpromiseModule } from 'nestjs-pgpromise';
 import config from 'config';
 import pgPromise from 'pg-promise';
-import { UserDatabase } from './user.database';
-import { AuthDatabase } from './auth.database';
+import { UserDatabase } from './function/user.database';
+import { AuthDatabase } from './function/auth.database';
 
 const database = NestPgpromiseModule.register({
   connection: {

@@ -1,0 +1,46 @@
+{
+  "SELECT_USER_INFO": {
+    "desc": "유저 정보를 찾습니다.",
+    "sql": [
+      "SELECT * ",
+      "FROM user_info ",
+      "WHERE 1=1 ",
+      " [AND userId = ${userId}] ",
+      " [AND nick = ${nick}] ",
+      " [AND del_fl = ${delFl}] ",
+      ";"
+    ]
+  },
+  "INSERT_USER_INFO": {
+    "desc": "유저 정보를 저장 합니다.",
+    "sql": [
+      "INSERT INTO user_info ",
+      "(user_id, nick, email, join_path) ",
+      "VALUES ",
+      "(${userID}, ${nick}, ${email}, ${joinPath})",
+      ";"
+    ]
+  },
+  "UPDATE_USER_INFO": {
+    "desc": "유저 정보를 갱신 합니다.",
+    "sql": [
+      "UPDATE user_info SET ",
+      " del_fl = '1' ",
+      " [, email = ${email}] ",
+      " [, nick = ${nick}] ",
+      "WHERE userId = ${userId} ",
+      ";"
+    ]
+  },
+  "DELETE_USER_INFO": {
+    "desc": "유저 정보를 삭제 합니다.",
+    "sql": [
+      "UPDATE user_info SET ",
+      " del_fl = '1' ",
+      "WHERE del_fl = '0' ",
+      " [AND userId = ${userId}] ",
+      " [AND nick = ${nick}] ",
+      ";"
+    ]
+  }
+}

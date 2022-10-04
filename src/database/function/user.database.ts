@@ -13,7 +13,7 @@ export class UserDatabase {
     return userInfo;
   }
 
-  public async resistUser<T, J>(reqRegist: ReqRegist, t: ITask<any>): Promise<J> {
+  public async registUser<T, J>(reqRegist: ReqRegist, t: ITask<any>): Promise<J> {
     let result: J;
     // const userInfo = await t.one<UserInfo>('SELECT * FROM user_info WHERE user_id = ${userId};', { userId });
 

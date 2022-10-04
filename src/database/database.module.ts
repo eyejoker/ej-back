@@ -7,11 +7,11 @@ import { AuthDatabase } from './function/auth.database';
 
 const database = NestPgpromiseModule.register({
   connection: {
-    host: config.get<string>('postgres.host'),
-    port: config.get<number>('postgres.port'),
-    database: config.get<string>('postgres.database'),
-    user: config.get<string>('postgres.user'),
-    password: config.get<string>('postgres.password'),
+    host: config.get<string>('DATABASE.host'),
+    port: config.get<number>('DATABASE.port'),
+    database: config.get<string>('DATABASE.database'),
+    user: config.get<string>('DATABASE.user'),
+    password: config.get<string>('DATABASE.password'),
   },
   initOptions: {
     receive: (data: any[]) => {
